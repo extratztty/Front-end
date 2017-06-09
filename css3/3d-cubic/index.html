@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>3D立方体</title>
+    <style>
+        * { padding: 0; margin: 0;}
+        img{border:0;}
+        ul{
+            width:200px;
+            height:200px;
+            margin:100px auto;
+            position:relative;
+            -webkit-transform-style:preserve-3d;
+            -webkit-transition: -webkit-transform 3s;
+        }
+        li{
+            list-style:none;
+            position: absolute;
+            width:200px;
+            height:200px;
+            box-shadow: 0 0 5px #aaa;
+        }
+        li:nth-child(1){-webkit-transform: translateZ(100px);}
+        li:nth-child(2){-webkit-transform: translateZ(-100px);}
+        li:nth-child(3){-webkit-transform: rotateX(90deg) translateZ(100px);}
+        li:nth-child(4){-webkit-transform: rotateY(90deg) translateZ(100px);}
+        li:nth-child(5){-webkit-transform: rotateX(270deg) translateZ(100px);}
+        li:nth-child(6){-webkit-transform: rotateY(270deg) translateZ(100px);}
+        /*ul:hover{-webkit-transform: rotateX(360deg)  rotateY(360deg);}*/
+        ul{-webkit-animation: run 3s linear infinite;}
+        @-webkit-keyframes run{
+            0%{-webkit-transform: rotateX(0deg) rotateY(0deg) }
+            100%{-webkit-transform: rotateX(360deg)  rotateY(360deg)  }
+        }
+    </style>
+</head>
+<body>
+<ul id="ul">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

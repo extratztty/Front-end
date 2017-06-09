@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>3d</title>
+    <title>3D</title>
     <style>
         .wrap{
             -webkit-perspective: 800;
@@ -12,13 +12,15 @@
         .box{
             width: 150px;
             height: 150px;
-            margin: 0 auto;
-            background-color: aquamarine;
-            box-shadow: 0 0 15px #aaa;
+            margin: 100px auto;
+            box-shadow: 0 0 5px #aaa;
+            line-height: 150px;
+            text-align: center;
+            font-size: 30px;
             -webkit-transition: -webkit-transform 1s ease-out;
         }
         .box:hover{
-            -webkit-transform: rotateX(180deg);
+            -webkit-transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
         }
     </style>
 </head>

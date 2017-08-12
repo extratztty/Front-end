@@ -70,7 +70,9 @@ function updateBoardView() {
                     'width':'0px',
                     'height':'0px',
                     'top':getPosTop(i) + cellSideLength/2,
-                    'left':getPosLeft(j) + cellSideLength/2
+                    'left':getPosLeft(j) + cellSideLength/2,
+                    'font-size':0.6 * cellSideLength + 'px',
+                    'line-height':cellSideLength + 'px'
                 });
             }
             else{
@@ -81,15 +83,14 @@ function updateBoardView() {
                     'left':getPosLeft(j),
                     'background-color':getNumberBackGroundColor(board[i][j]),
                     'color':getNumberColor(board[i][j]),
-                    'font-size':getFontSize(board[i][j])
+                    'font-size':getFontSize(board[i][j]) + 'px',
+                    'line-height':cellSideLength + 'px'
                 });
                 theNumberCell.text(board[i][j]);
             }
             hasConflicted[i][j] = false;
         }
     }
-    $(".number-cell").css('line-height',cellSideLength + 'px');
-    $(".number-cell").css('font-size',0.6 * cellSideLength + 'px');
 }
 function generateOneNumber() {
     if(nospace(board)){

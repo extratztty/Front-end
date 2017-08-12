@@ -39,21 +39,21 @@ function getNumberColor(number) {
 }
 function getFontSize(number) {
     switch (number){
-        case 2:return "60px";break;
-        case 4:return "60px";break;
-        case 8:return "60px";break;
-        case 16:return "50px";break;
-        case 32:return "50px";break;
-        case 64:return "50px";break;
-        case 128:return "45px";break;
-        case 256:return "45px";break;
-        case 512:return "45px";break;
-        case 1024:return "40px";break;
-        case 2048:return "40px";break;
-        case 4096:return "40px";break;
-        case 8192:return "40px";break;
+        case 2:return 0.6 * cellSideLength;break;
+        case 4:return 0.6 * cellSideLength;break;
+        case 8:return 0.6 * cellSideLength;break;
+        case 16:return 0.55 * cellSideLength;break;
+        case 32:return 0.55 * cellSideLength ;break;
+        case 64:return 0.55 * cellSideLength;break;
+        case 128:return 0.5 * cellSideLength;break;
+        case 256:return 0.5 * cellSideLength;break;
+        case 512:return 0.5 * cellSideLength;break;
+        case 1024:return 0.4 * cellSideLength;break;
+        case 2048:return 0.4 * cellSideLength;break;
+        case 4096:return 0.4 * cellSideLength;break;
+        case 8192:return 0.4 * cellSideLength;break;
     }
-    return "30px";
+    return 0.3 * cellSideLength;
 }
 function nospace(board) {
     for(var i = 0;i < 4;i ++){

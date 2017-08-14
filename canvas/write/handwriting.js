@@ -6,8 +6,8 @@ var canvasHeight = canvasWidth;
 
 // var strokeColor = "black";
 var isMouseDown = false;
-var lastLoc = {x:0,y:0};
 var lastTimeStamp = 0;
+var lastLoc = {x:0,y:0};
 var lastLineWidth = -1;
 
 var canvas = document.getElementById('canvas');
@@ -48,7 +48,7 @@ function moveStroke(point) {
     context.moveTo(lastLoc.x,lastLoc.y);
     context.lineTo(curLoc.x,curLoc.y);
 
-    context.strokeStyle = strokeColor;
+    context.strokeStyle = "black";
     context.lineWidth = lineWidth;
     context.lineCap = 'round';
     context.lineJoin = 'round';
@@ -95,9 +95,10 @@ canvas.addEventListener('touchend',function (e) {
 function calcLineWidth(t,s) {
     var v = s/t;
     var resultLineWidth;
-    if(v <= 0.1)resultLineWidth = canvasWidth/25;
+    var itWidth = Math.floor(canvasWidth/25);
+    if(v <= 0.1)resultLineWidth = itWidth;
     else if(v >= 10)resultLineWidth = 0;
-    else resultLineWidth = 30 - (v-0.1)/(10-0.1)*(canvasWidth/25-1);
+    else resultLineWidth = itWidth - (v-0.1)/(10-0.1)*(itWidth-1);
 
     if(lastLineWidth === -1)
         return resultLineWidth;

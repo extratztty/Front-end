@@ -98,7 +98,7 @@ function calcLineWidth(t,s) {
     var itWidth = Math.floor(canvasWidth/25);
     if(v <= 0.1)resultLineWidth = itWidth;
     else if(v >= 10)resultLineWidth = 0;
-    else resultLineWidth = itWidth - (v-0.1)/(10-0.1)*(itWidth-1);
+    else resultLineWidth = itWidth - (v-0.1)/(10-0.1)*itWidth;
 
     if(lastLineWidth === -1)
         return resultLineWidth;

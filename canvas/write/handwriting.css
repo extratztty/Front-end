@@ -27,36 +27,36 @@
     clear: both;
 }
 
-.color_btn{
-    float: left;
-    margin: 10px 10px 0 0;
-    border: 5px solid white;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.color_btn:hover{
-    opacity: .8;
-}
-.color_btn_selected{
-    border: 5px solid #ddd;
-}
-#black_btn{
-    background-color: black;
-}
-#blue_btn{
-    background-color: blue;
-}
-#green_btn{
-    background-color: green
-}
-#red_btn{
-    background-color: red;
-}
-#orange_btn{
-    background-color: orange;
-}
-#yellow_btn{
-    background-color: yellow;
-}
+/*.color_btn{*/
+    /*float: left;*/
+    /*margin: 10px 10px 0 0;*/
+    /*border: 5px solid white;*/
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*border-radius: 5px;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.color_btn:hover{*/
+    /*opacity: .8;*/
+/*}*/
+/*.color_btn_selected{*/
+    /*border: 5px solid #ddd;*/
+/*}*/
+/*#black_btn{*/
+    /*background-color: black;*/
+/*}*/
+/*#blue_btn{*/
+    /*background-color: blue;*/
+/*}*/
+/*#green_btn{*/
+    /*background-color: green*/
+/*}*/
+/*#red_btn{*/
+    /*background-color: red;*/
+/*}*/
+/*#orange_btn{*/
+    /*background-color: orange;*/
+/*}*/
+/*#yellow_btn{*/
+    /*background-color: yellow;*/
+/*}*/

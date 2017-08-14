@@ -4,7 +4,7 @@
 var canvasWidth = Math.min(800,$(window).width() - 20);
 var canvasHeight = canvasWidth;
 
-var strokeColor = "black";
+// var strokeColor = "black";
 var isMouseDown = false;
 var lastLoc = {x:0,y:0};
 var lastTimeStamp = 0;
@@ -22,11 +22,11 @@ $("#clear_btn").click(function () {
     context.clearRect(0,0,canvasWidth,canvasHeight);
     drawGrid();
 });
-$(".color_btn").click(function () {
-    $(".color_btn").removeClass("color_btn_selected");
-    $(this).addClass("color_btn_selected");
-    strokeColor = $(this).css("background-color");
-});
+// $(".color_btn").click(function () {
+//     $(".color_btn").removeClass("color_btn_selected");
+//     $(this).addClass("color_btn_selected");
+//     strokeColor = $(this).css("background-color");
+// });
 
 function beginStroke(point) {
     isMouseDown = true;
@@ -95,9 +95,9 @@ canvas.addEventListener('touchend',function (e) {
 function calcLineWidth(t,s) {
     var v = s/t;
     var resultLineWidth;
-    if(v <= 0.1)resultLineWidth = 30;
+    if(v <= 0.1)resultLineWidth = canvasWidth/25;
     else if(v >= 10)resultLineWidth = 0;
-    else resultLineWidth = 30 - (v-0.1)/(10-0.1)*(30-1);
+    else resultLineWidth = 30 - (v-0.1)/(10-0.1)*(canvasWidth/25-1);
 
     if(lastLineWidth === -1)
         return resultLineWidth;

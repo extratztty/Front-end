@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Game</title>
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<a href="#" id="rule" style="display: block;margin: 15px auto;width: 80px;padding: 10px;background-color: #337ab7;color: white;border-radius: 10px;text-decoration: none;text-align: center">游戏规则</a>
+<canvas id="canvas" style="margin: 30px auto;display: block;transform: translateX(-60px)"></canvas>
+<script src="game.js"></script>
+<script>
+    document.getElementById("rule").onclick = function () {
+        alert("每行每列标记的数字对应该行该列填充方格的格式，例如 \"2 3\"表示该行(列)从左到右应有两个连续填充的方格和三个连续填充的方格，同时二者不连续。\n点击或滑动可填充方格。");
+    }
+</script>
+</body>
+</html>

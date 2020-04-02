@@ -1,5 +1,5 @@
-var canvasWidth = Math.min(640,$(window).width()*2/3);
-var canvasHeight = Math.min(640,$(window).width()*2/3);
+var canvasWidth = Math.min(640,$(window).width()*3/4);
+var canvasHeight = Math.min(640,$(window).width()*3/4);
 var block = 16;
 var margin = 120;
 var flag = 0;
